@@ -17,7 +17,11 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  background-image: url("../public/background.png");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../public/background.png");
   background-size: cover; /* cobre toda a tela */
   background-position: center; /* centraliza a imagem */
   background-repeat: no-repeat; /* não repete */
@@ -97,6 +101,8 @@ select {
 .tabela-wrapper {
   width: 100%;
   overflow-x: auto; /* scroll horizontal se necessário */
+  overflow-y: auto;
+  max-height: 500px;
 }
 
 .tabela-reservas {
@@ -117,6 +123,10 @@ select {
 .tabela-reservas th {
   background-color: #f0f0f0;
   font-weight: bold;
+  position: sticky;
+  top: 0; /* fixa no topo do wrapper */
+  background-color: #f0f0f0;
+  z-index: 2; /* para ficar acima das linhas */
 }
 
 .tabela-reservas tr:nth-child(even) {

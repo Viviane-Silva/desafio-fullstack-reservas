@@ -10,8 +10,14 @@ function Tela2({ voltarParaTela1 }) {
   const [estacao, setEstacao] = useState("");
   const [sucesso, setSucesso] = useState(false);
 
-  // Mock das estações (substituir por GET do backend depois)
-  const estacoes = ["Estação A", "Estação B", "Estação C"];
+  // Estações
+  const estacoes = [
+    "Estação 1",
+    "Estação 2",
+    "Estação 3",
+    "Estação 4",
+    "Estação 5",
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -99,8 +105,8 @@ function Tela2({ voltarParaTela1 }) {
           <label>
             <input
               type="radio"
-              value="manha"
-              checked={periodo === "manha"}
+              value="Manha"
+              checked={periodo === "Manha"}
               onChange={(e) => setPeriodo(e.target.value)}
             />{" "}
             Manhã
@@ -108,8 +114,8 @@ function Tela2({ voltarParaTela1 }) {
           <label>
             <input
               type="radio"
-              value="tarde"
-              checked={periodo === "tarde"}
+              value="Tarde"
+              checked={periodo === "Tarde"}
               onChange={(e) => setPeriodo(e.target.value)}
             />{" "}
             Tarde
@@ -117,8 +123,8 @@ function Tela2({ voltarParaTela1 }) {
           <label>
             <input
               type="radio"
-              value="noite"
-              checked={periodo === "noite"}
+              value="Noite"
+              checked={periodo === "Noite"}
               onChange={(e) => setPeriodo(e.target.value)}
             />{" "}
             Noite
