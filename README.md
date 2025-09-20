@@ -62,26 +62,27 @@ python manage.py runserver
 ```
 
 ### Frontend
-
+```bash
 npm install
 npm start
+```
 
 
 ### Observações
 
--Usuários e reservas de teste foram criados para acesso imediato.
--Layout do frontend foi desenvolvido sem suporte de designer, priorizando usabilidade e clareza.
--Próximos passos: autenticação de usuários, melhorias de layout, notificações e integração completa com backend para múltiplos fluxos de uso.
+- Usuários e reservas de teste foram criados para acesso imediato.
+- Layout do frontend foi desenvolvido sem suporte de designer, priorizando usabilidade e clareza.
+- Próximos passos: autenticação de usuários, melhorias de layout, notificações e integração completa com backend para múltiplos fluxos de uso.
 
-
-#### Aprendizado
+### Aprendizado
 
 Durante este desafio, pude:
--Aprender Django na prática pela primeira vez, criando models, endpoints e painel admin.
--Consumir APIs do backend no React, integrando frontend e backend.
--Desenvolver interfaces responsivas e funcionais sem designer.
--Praticar decisões de arquitetura e fluxo de dados entre frontend e backend.
--Aumentar a confiança em trabalhar de forma independente em um projeto fullstack.
+
+- Aprender Django na prática pela primeira vez, criando models, endpoints e painel admin.
+- Consumir APIs do backend no React, integrando frontend e backend.
+- Desenvolver interfaces responsivas e funcionais sem designer.
+- Praticar decisões de arquitetura e fluxo de dados entre frontend e backend.
+- Aumentar a confiança em trabalhar de forma independente em um projeto fullstack.
 
 
 #### Links e Referências
