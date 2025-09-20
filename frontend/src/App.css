@@ -1,16 +1,52 @@
+@font-face {
+  font-family: "OdudaFont";
+  src: url("../public/Oduda/oduda_bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Fonte Gotham */
+@font-face {
+  font-family: "GothamRounded";
+  src: url("../public/GothamRounded/gothamrnd_book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: "GothamRounded", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-image: url("../public/background.png");
+  background-size: cover; /* cobre toda a tela */
+  background-position: center; /* centraliza a imagem */
+  background-repeat: no-repeat; /* não repete */
+  background-attachment: fixed;
+}
+
+/* Títulos e logo */
+h1,
+h2,
+h3,
+.logo,
+.titulo {
+  font-family: "OdudaFont", sans-serif;
+  font-weight: 600;
+}
+
 .container {
-  max-width: 600px;
+  max-width: 1000px; /* maior para caber tabelas maiores */
   margin: 50px auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  font-family: "GothamRounded", sans-serif;
+  background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(51, 51, 51);
 }
 
 .title {
   text-align: center;
-  color: #333;
+  color: #333333;
 }
 
 .form {
@@ -24,52 +60,58 @@
 select {
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #333333;
   font-size: 14px;
+  font-family: "GothamRounded", sans-serif;
 }
 
+/* Botões */
 .button {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #4caf50;
-  color: white;
+  background-color: #6482f8;
+  color: #ffffff;
   font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
+  font-family: "GothamRounded", sans-serif;
 }
 
-.list {
-  list-style: none;
-  padding: 0;
-}
-
-.list-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  align-items: center;
-}
-/* Centralizar botão */
 .button-container {
   display: flex;
   justify-content: center;
   margin: 20px 0;
 }
+.logo-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
 
-/* Tabela de reservas */
+.logo {
+  max-width: 200px; /* ajusta o tamanho */
+  height: auto;
+}
+
+/* Tabela */
+.tabela-wrapper {
+  width: 100%;
+  overflow-x: auto; /* scroll horizontal se necessário */
+}
+
 .tabela-reservas {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  table-layout: auto; /* colunas se ajustam ao conteúdo */
+  min-width: 600px; /* garante que não fique muito estreita */
 }
 
 .tabela-reservas th,
 .tabela-reservas td {
   border: 1px solid #ccc;
   padding: 8px;
-  text-align: left;
+  text-align: center; /* centraliza conteúdo */
+  white-space: nowrap; /* evita quebra de linha */
 }
 
 .tabela-reservas th {

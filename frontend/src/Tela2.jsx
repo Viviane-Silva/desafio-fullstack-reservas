@@ -48,15 +48,20 @@ function Tela2({ voltarParaTela1 }) {
     return (
       <div className="container">
         <h1 className="title">Reserva realizada com sucesso! 🎉</h1>
-        <button className="button" onClick={voltarParaTela1}>
-          Voltar para lista
-        </button>
+        <div className="button-container">
+          <button className="button" onClick={voltarParaTela1}>
+            Voltar para lista
+          </button>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="container">
+      <div className="logo-container">
+        <img src="./public/logo.png" alt="Logo" className="logo" />
+      </div>
       <h1 className="title">Nova Reserva</h1>
       <form onSubmit={handleSubmit} className="form">
         <input
