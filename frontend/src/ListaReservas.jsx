@@ -35,7 +35,8 @@ function ListaReservas({ irParaCadastroReservas }) {
               <th>Nome</th>
               <th>Email</th>
               <th>Data</th>
-              <th>Horário</th>
+              <th>Reservado</th>
+              <th>Até</th>
               <th>Período</th>
               <th>Ambiente</th>
             </tr>
@@ -46,7 +47,8 @@ function ListaReservas({ irParaCadastroReservas }) {
                 <td>{r.nome}</td>
                 <td>{r.email}</td>
                 <td>{r.data_reserva}</td>
-                <td>{r.horario}</td>
+                <td>{r.horario_inicio}</td>
+                <td>{r.horario_fim}</td>
                 <td>{r.periodo}</td>
                 <td>{r.ambiente}</td>
               </tr>

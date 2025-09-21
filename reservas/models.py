@@ -1,4 +1,6 @@
 from django.db import models
+from datetime import datetime, timedelta
+from django.core.exceptions import ValidationError
 
 # cria espaço trabalho/salas
 class Ambiente(models.Model):
@@ -25,7 +27,8 @@ class Reserva(models.Model):
     nome = models.CharField(max_length=100)
     email = models.EmailField()
     data_reserva = models.DateField()
-    horario = models.TimeField()
+    horario_inicio = models.TimeField()
+    horario_fim = models.TimeField()
     periodo = models.CharField(max_length=20)  # obrigatório
     ambiente = models.ForeignKey(Ambiente, on_delete=models.CASCADE) 
     criacao = models.DateTimeField(auto_now_add=True)
@@ -33,5 +36,12 @@ class Reserva(models.Model):
 
         
     def __str__(self):
-        return f"{self.nome} - {self.data_reserva} {self.horario}"
-    
+        return f"{self.nome} - {self.data_reserva} {self.horario_inicio}"
+
+    def clean(self):
+        if self.horario_fim <= self.horario_inicio:
+            raise ValidationError("Horário final deve ser maior que o horário inicial.")
+
+        duracao = datetime.combine(self.data_reserva, self.horario_fim) - datetime.combine(self.data_reserva, self.horario_inicio)
+        if duracao > timedelta(hours=8):
+            raise ValidationError("A duração máxima permitida é de 8 horas.")

@@ -5,7 +5,8 @@ function CadastroReservas({ voltarParaListaReservas }) {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [data, setData] = useState("");
-  const [horario, setHorario] = useState("");
+  const [horario_inicio, setHorarioInicio] = useState("");
+  const [horario_fim, setHorarioFim] = useState("");
   const [periodo, setPeriodo] = useState("manha");
   const [ambientes, setAmbientes] = useState([]);
   const [ambiente, setAmbiente] = useState("");
@@ -24,17 +25,15 @@ function CadastroReservas({ voltarParaListaReservas }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const horarioFormatado =
-      horario.includes(":") && horario.split(":").length === 2
-        ? horario + ":00"
-        : horario;
-
+    const formatarHorario = (h) =>
+      h.includes(":") && h.split(":").length === 2 ? h + ":00" : h;
     api
       .post("/reservas/", {
         nome,
         email,
         data_reserva: data,
-        horario: horarioFormatado,
+        horario_inicio: formatarHorario(horario_inicio),
+        horario_fim: formatarHorario(horario_fim),
         periodo,
         ambiente,
       })
@@ -43,7 +42,8 @@ function CadastroReservas({ voltarParaListaReservas }) {
         setNome("");
         setEmail("");
         setData("");
-        setHorario("");
+        setHorarioInicio("");
+        setHorarioFim("");
         setPeriodo("manha");
         setAmbiente("");
       })
@@ -100,8 +100,15 @@ function CadastroReservas({ voltarParaListaReservas }) {
         <input
           className="input"
           type="time"
-          value={horario}
-          onChange={(e) => setHorario(e.target.value)}
+          value={horario_inicio}
+          onChange={(e) => setHorarioInicio(e.target.value)}
+          required
+        />
+        <input
+          className="input"
+          type="time"
+          value={horario_fim}
+          onChange={(e) => setHorarioFim(e.target.value)}
           required
         />
 
