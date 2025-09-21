@@ -49,20 +49,21 @@ Nesta primeira etapa, o foco foi:
 ---
 
 ## Como rodar o projeto
+Abra dois terminais:
 
-### Backend
-
+### Terminal 1 – Backend
 ```bash
 python -m venv venv
-source venv/bin/activate   # Linux/Mac
+source venv/Scripts/activate   # Linux/Mac ou bash
 venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
 
-### Frontend
+### Terminal 2 – Frontend
 ```bash
+cd frontend
 npm install
 npm start
 ```
