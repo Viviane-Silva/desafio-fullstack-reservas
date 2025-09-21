@@ -13,11 +13,11 @@ Nesta primeira etapa, o foco foi:
 
 ### Funcionalidades implementadas nesta etapa
 
-**Tela 1 – Lista de Reservas**
+**Tela Inicial – Lista de Reservas**
 - Mostra reservas já feitas.
 - Botão para criar uma nova reserva (leva para Tela 2).
 
-**Tela 2 – Nova Reserva**
+**Tela de Cadastro – Nova Reserva**
 - Lista de estações de trabalho disponíveis.
 - Seleção de dia da reserva.
 - Escolha de período (radio buttons).
@@ -41,10 +41,12 @@ Nesta primeira etapa, o foco foi:
 ---
 
 
-## Tecnologias Utilizadas
+### Arquitetura do Projeto
+O projeto foi dividido em duas camadas principais:
 
-- **Backend:** Python, Django, Django REST Framework, SQLite
-- **Frontend:** React, HTML, CSS, fetch API
+- **Frontend (React):** SPA com rotas para diferentes telas, consumo de API via `fetch`, componentes reutilizáveis e layout responsivo.
+- **Backend (Django + DRF):** API RESTful com endpoints organizados por recurso, painel administrativo para gestão e banco SQLite para persistência.
+
 
 ---
 
@@ -65,7 +67,7 @@ python manage.py runserver
 ```bash
 cd frontend
 npm install
-npm start
+npm run dev
 ```
 
 
@@ -73,10 +75,21 @@ npm start
 
 - Usuários e reservas de teste foram criados para acesso imediato.
 - Layout do frontend foi desenvolvido sem suporte de designer, priorizando usabilidade e clareza.
-- Próximos passos: autenticação de usuários, melhorias de layout, notificações e integração completa com backend para múltiplos fluxos de uso.
+
+
+### Visão de Evolução do Projeto
+Com base no escopo descrito pelo vendedor, o sistema foi estruturado para permitir futuras funcionalidades como:
+
+- **Cadastro de espaços físicos adicionais** (salas de reunião, auditórios).
+- **Cancelamento de reservas pelo usuário**.
+- **Check-in via QR Code no local reservado**.
+- **Pontuação negativa para usuários que não comparecem ou cancelam em cima da hora**.
+- **Painel administrativo com visão macro das alocações e histórico de uso**.
+
+Essas funcionalidades estão mapeadas e serão implementadas nas próximas sprints, respeitando a expectativa de evolução gradual do produto.
+
 
 ### Aprendizado
-
 Durante este desafio, pude:
 
 - Aprender Django na prática pela primeira vez, criando models, endpoints e painel admin.
@@ -93,5 +106,10 @@ Durante este desafio, pude:
 <a href="https://www.youtube.com/watch?v=p5MCJLIn_is&list=PLLVddSbilcumgeyk0z6ko5U_FYPfbRO2C&index=2" target="_blank">Curso de Django - Canal Jefferson Lobato</a><br>
 <a href="https://www.youtube.com/watch?v=LY_-FXNVidE" target="_blank">Django(Python) e React(JS) - criar endpoints para servir o frontend - Canal ComuniCloud</a><br>
 <a href="https://www.youtube.com/watch?v=YW113aC8TII" target="_blank">GUIA INICIAL COMPLETO DE PYTHON E DJANGO - Canal Pythonando</a>
+
+
+### Conclusão
+
+Este projeto representa não apenas a entrega de um sistema funcional, mas também minha capacidade de compreender o contexto do cliente, estruturar soluções e evoluir com autonomia. Estou preparada para seguir para as próximas etapas e contribuir com qualidade e visão de produto.
 
 
