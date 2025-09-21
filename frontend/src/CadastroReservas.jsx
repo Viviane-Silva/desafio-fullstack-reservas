@@ -1,23 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import api from "./api";
 
-function Tela2({ voltarParaTela1 }) {
+function CadastroReservas({ voltarParaListaReservas }) {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [data, setData] = useState("");
   const [horario, setHorario] = useState("");
   const [periodo, setPeriodo] = useState("manha");
-  const [estacao, setEstacao] = useState("");
+  const [ambientes, setAmbientes] = useState([]);
+  const [ambiente, setAmbiente] = useState("");
   const [sucesso, setSucesso] = useState(false);
 
-  // Estações
-  const estacoes = [
-    "Estação 1",
-    "Estação 2",
-    "Estação 3",
-    "Estação 4",
-    "Estação 5",
-  ];
+  // Buscar ambientes do backend
+  useEffect(() => {
+    api
+      .get("/ambientes/")
+      .then((res) => setAmbientes(res.data))
+      .catch((err) => {
+        console.error("Erro ao carregar estações", err);
+        alert("Não foi possível carregar as estações.");
+      });
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,7 +36,7 @@ function Tela2({ voltarParaTela1 }) {
         data_reserva: data,
         horario: horarioFormatado,
         periodo,
-        estacao,
+        ambiente,
       })
       .then(() => {
         setSucesso(true);
@@ -42,11 +45,13 @@ function Tela2({ voltarParaTela1 }) {
         setData("");
         setHorario("");
         setPeriodo("manha");
-        setEstacao("");
+        setAmbiente("");
       })
       .catch((err) => {
-        console.error(err.response?.data || err);
-        alert("Erro ao criar reserva!");
+        alert(
+          err.response?.data?.non_field_errors?.[0] ||
+            "Erro ao criar reserva! Esta estação já está reservada para esse período e data."
+        );
       });
   };
 
@@ -55,7 +60,7 @@ function Tela2({ voltarParaTela1 }) {
       <div className="container">
         <h1 className="title">Reserva realizada com sucesso! 🎉</h1>
         <div className="button-container">
-          <button className="button" onClick={voltarParaTela1}>
+          <button className="button" onClick={voltarParaListaReservas}>
             Voltar para lista
           </button>
         </div>
@@ -132,16 +137,16 @@ function Tela2({ voltarParaTela1 }) {
         </div>
 
         <div>
-          <label>Estação:</label>
+          <label>Ambiente:</label>
           <select
-            value={estacao}
-            onChange={(e) => setEstacao(e.target.value)}
+            value={ambiente}
+            onChange={(e) => setAmbiente(e.target.value)}
             required
           >
             <option value="">Selecione</option>
-            {estacoes.map((e) => (
-              <option key={e} value={e}>
-                {e}
+            {ambientes.map((e) => (
+              <option key={e.id} value={e.id}>
+                {e.nome}
               </option>
             ))}
           </select>
@@ -150,7 +155,11 @@ function Tela2({ voltarParaTela1 }) {
         <button className="button" type="submit">
           Reservar
         </button>
-        <button className="button" type="button" onClick={voltarParaTela1}>
+        <button
+          className="button"
+          type="button"
+          onClick={voltarParaListaReservas}
+        >
           Cancelar
         </button>
       </form>
@@ -158,4 +167,4 @@ function Tela2({ voltarParaTela1 }) {
   );
 }
 
-export default Tela2;
+export default CadastroReservas;

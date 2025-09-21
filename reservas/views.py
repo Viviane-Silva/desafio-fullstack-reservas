@@ -1,7 +1,7 @@
 
 from rest_framework import viewsets
-from .models import Reserva
-from .serializers import ReservaSerializer
+from .models import Reserva, Ambiente
+from .serializers import ReservaSerializer, AmbienteSerializer
 
 
 class ReservaViewSet(viewsets.ModelViewSet):
@@ -10,3 +10,8 @@ class ReservaViewSet(viewsets.ModelViewSet):
     """
     queryset = Reserva.objects.all()
     serializer_class = ReservaSerializer
+
+class AmbienteViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Ambiente.objects.all()
+    serializer_class = AmbienteSerializer
+

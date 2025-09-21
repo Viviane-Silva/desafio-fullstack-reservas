@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "./api";
 
-function Tela1({ irParaTela2 }) {
+function ListaReservas({ irParaCadastroReservas }) {
   const [reservas, setReservas] = useState([]);
 
   const fetchReservas = () => {
@@ -23,7 +23,7 @@ function Tela1({ irParaTela2 }) {
       <h1 className="title">Reservas Existentes</h1>
 
       <div className="button-container">
-        <button className="button" onClick={irParaTela2}>
+        <button className="button" onClick={irParaCadastroReservas}>
           Fazer Reserva
         </button>
       </div>
@@ -37,7 +37,7 @@ function Tela1({ irParaTela2 }) {
               <th>Data</th>
               <th>Horário</th>
               <th>Período</th>
-              <th>Estação</th>
+              <th>Ambiente</th>
             </tr>
           </thead>
           <tbody>
@@ -48,7 +48,7 @@ function Tela1({ irParaTela2 }) {
                 <td>{r.data_reserva}</td>
                 <td>{r.horario}</td>
                 <td>{r.periodo}</td>
-                <td>{r.estacao}</td>
+                <td>{r.ambiente}</td>
               </tr>
             ))}
           </tbody>
@@ -58,4 +58,4 @@ function Tela1({ irParaTela2 }) {
   );
 }
 
-export default Tela1;
+export default ListaReservas;
