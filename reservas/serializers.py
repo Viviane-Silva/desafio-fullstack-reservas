@@ -24,9 +24,9 @@ class ReservaSerializer(serializers.ModelSerializer):
         if fim <= inicio:
             raise serializers.ValidationError("Horário final deve ser maior que o horário inicial.")
 
-        duracao = datetime.combine(data_reserva, fim) - datetime.combine(data_reserva, inicio)
-        if duracao > timedelta(hours=8):
-            raise serializers.ValidationError("A duração máxima permitida é de 8 horas.")
+        # duracao = datetime.combine(data_reserva, fim) - datetime.combine(data_reserva, inicio)
+        # if duracao > timedelta(hours=8):
+        #     raise serializers.ValidationError("A duração máxima permitida é de 8 horas.")
 
         # Verifica conflitos com outras reservas ativas
         conflitos = Reserva.objects.filter(
