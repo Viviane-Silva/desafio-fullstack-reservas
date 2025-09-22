@@ -4,6 +4,13 @@
 
 Projeto desenvolvido como **desafio técnico** para criar um sistema web que permite gerenciar reservas de estações de trabalho em uma empresa.
 
+## Demonstração
+
+![Demonstração do sistema de reservas](./ReservaAmbienteTrabalho.gif)
+> O GIF acima mostra o fluxo completo de criação de uma reserva, incluindo seleção de estação, data e período.
+
+
+
 Nesta primeira etapa, o foco foi:
 
 - **Frontend bonito e funcional** em React, com telas responsivas.
