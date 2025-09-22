@@ -15,7 +15,7 @@ Nesta primeira etapa, o foco foi:
 **Tela Inicial – Lista de Reservas**
 
 - Mostra reservas já feitas.
-- Botão para criar uma nova reserva (leva para Tela 2).
+- Botão para criar uma nova reserva (leva para Tela 2(Cadastro)).
 
 **Tela de Cadastro – Nova Reserva**
 
@@ -48,8 +48,6 @@ Durante o desenvolvimento, foi implementada uma validação adicional no backend
 - O mesmo ambiente
 - A mesma data
 - Intervalos de horário que colidem (ex: 14h–16h e 15h–17h)
-
-Além disso, foi incluída uma regra que limita a duração máxima da reserva a **8 horas**, respeitando o padrão de jornada CLT.
 
 #### Motivo da implementação
 
