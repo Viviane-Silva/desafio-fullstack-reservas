@@ -4,6 +4,13 @@
 
 Projeto desenvolvido como **desafio técnico** para criar um sistema web que permite gerenciar reservas de estações de trabalho em uma empresa.
 
+## Demonstração
+
+![Demonstração do sistema de reservas](./ReservaAmbienteTrabalho.gif)
+> O GIF acima mostra o fluxo completo de criação de uma reserva, incluindo seleção de estação, data e período.
+
+
+
 Nesta primeira etapa, o foco foi:
 
 - **Frontend bonito e funcional** em React, com telas responsivas.
@@ -118,7 +125,7 @@ Durante este desafio, pude:
 
 <a href="https://online-fonts.com/" target="_blank">Online Fonts - fontes utilizadas</a><br>
 <a href="https://www.behance.net/gallery/116142669/Guille-Manual-de-marca" target="_blank">Manual de Marca no Behance</a><br>
-<a href="https://docs.djangoproject.com/en/5.2/topics/migrations/" target="_blank">Documentação Django</a>
+<a href="https://docs.djangoproject.com/en/5.2/topics/migrations/" target="_blank">Documentação Django</a><br>
 <a href="https://www.youtube.com/watch?v=p5MCJLIn_is&list=PLLVddSbilcumgeyk0z6ko5U_FYPfbRO2C&index=2" target="_blank">Curso de Django - Canal Jefferson Lobato</a><br>
 <a href="https://www.youtube.com/watch?v=LY_-FXNVidE" target="_blank">Django(Python) e React(JS) - criar endpoints para servir o frontend - Canal ComuniCloud</a><br>
 <a href="https://www.youtube.com/watch?v=YW113aC8TII" target="_blank">GUIA INICIAL COMPLETO DE PYTHON E DJANGO - Canal Pythonando</a>
