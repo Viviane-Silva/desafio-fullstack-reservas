@@ -1,0 +1,19 @@
+Raciocínio de Desenvolvimento
+
+Antes de iniciar o projeto, realizei algumas pesquisas sobre Django, já que ainda não havia desenvolvido nenhum projeto com esse framework. Assisti a vídeos no YouTube e consultei a documentação oficial para entender os conceitos básicos e boas práticas.
+
+Com esse conhecimento inicial, criei um repositório no GitHub e o clonei na máquina local. Para manter a organização e clareza, separei o backend e o frontend em pastas distintas. Também criei uma pasta chamada "reservas" para concentrar os models relacionados ao sistema.
+
+No backend, comecei instalando o Django e suas dependências, depois criei o projeto e configurei o ambiente virtual (a ordem exata pode ter variado). Após isso, rodei o servidor para garantir que tudo estava funcionando corretamente.
+
+No frontend, inicializei o projeto com React, instalei as dependências e testei a execução. Durante a integração entre React e Django, identifiquei um erro relacionado ao CORS — que surgiu ao tentar consumir a API do backend. Pesquisei sobre o problema e implementei a configuração adequada no Django para permitir o acesso cruzado.
+
+Com a base pronta, revisei os arquivos e instruções fornecidos para entender o fluxo proposto pelo Product Owner. Estruturei o backend com os componentes necessários: models, serializers, viewsets e rotas, seguindo o que aprendi nos vídeos e pesquisas. Após isso, executei as migrações do banco de dados e criei o superusuário para acessar o painel administrativo.
+
+Finalizada essa etapa, passei para o desenvolvimento do frontend. Criei as telas iniciais com uma estrutura simples de CSS para validar a comunicação com o backend. Em seguida, refinei o layout, buscando um visual mais agradável e funcional, mesmo sem contar com um escopo de UX definido. Usei criatividade para propor uma interface clara e intuitiva.
+
+Com o fluxo do PO atendido, aproveitei o tempo restante para implementar validações nos campos de reserva. Como o objetivo principal do sistema é garantir a disponibilidade dos espaços de trabalho, considerei importante já entregar essa funcionalidade na primeira sprint, demonstrando que o núcleo do sistema está sendo construído desde o início.
+
+Por fim, realizei ajustes visuais no CSS, como fixar a primeira linha da tabela de reservas para facilitar a leitura em listas extensas. Também adicionei filtros no painel administrativo e melhorei a visualização da tabela de ambientes, alinhando melhor com a proposta do cliente.
+
+Esse processo me permitiu aprender na prática, tomar decisões técnicas com autonomia e entregar uma solução funcional e evolutiva.
