@@ -39,7 +39,21 @@ Nesta primeira etapa, o foco foi:
 - Endpoints REST para:
   - Listar estações de trabalho disponíveis
   - Criar nova reserva
-  - Listar reservas existentes e editar.
+  - Listar reservas existentes.
+
+### Validação de Conflitos de Reserva por Horário
+
+Durante o desenvolvimento, foi implementada uma validação adicional no backend para garantir que os ambientes não sejam reservados por múltiplos usuários em horários que se sobrepõem. Essa lógica considera:
+
+- O mesmo ambiente
+- A mesma data
+- Intervalos de horário que colidem (ex: 14h–16h e 15h–17h)
+
+Além disso, foi incluída uma regra que limita a duração máxima da reserva a **8 horas**, respeitando o padrão de jornada CLT.
+
+#### Motivo da implementação
+
+Essa funcionalidade **não estava explicitamente descrita no fluxo do Product Owner**, mas foi adicionada com o objetivo de enriquecer a entrega da sprint. Ela demonstra atenção aos detalhes e preocupação com a experiência real do usuário, sem extrapolar o escopo do desafio técnico. A decisão foi pensada para agregar valor à solução e mostrar capacidade de antecipar problemas práticos, mantendo o foco no objetivo principal do sistema: garantir que o espaço reservado esteja realmente disponível.
 
 ---
 
