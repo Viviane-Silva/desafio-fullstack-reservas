@@ -128,7 +128,9 @@ Durante este desafio, pude:
 <a href="https://docs.djangoproject.com/en/5.2/topics/migrations/" target="_blank">Documentação Django</a><br>
 <a href="https://www.youtube.com/watch?v=p5MCJLIn_is&list=PLLVddSbilcumgeyk0z6ko5U_FYPfbRO2C&index=2" target="_blank">Curso de Django - Canal Jefferson Lobato</a><br>
 <a href="https://www.youtube.com/watch?v=LY_-FXNVidE" target="_blank">Django(Python) e React(JS) - criar endpoints para servir o frontend - Canal ComuniCloud</a><br>
-<a href="https://www.youtube.com/watch?v=YW113aC8TII" target="_blank">GUIA INICIAL COMPLETO DE PYTHON E DJANGO - Canal Pythonando</a>
+<a href="https://www.youtube.com/watch?v=YW113aC8TII" target="_blank">GUIA INICIAL COMPLETO DE PYTHON E DJANGO - Canal Pythonando</a><br>
+<a href="https://www.youtube.com/watch?v=YW113aC8TII" target="_blank">Estrutura Básica de um Projeto em Django - Hashtag Programação</a><br>
+<a href="https://www.youtube.com/watch?v=-m5ywU8SW9E" target="_blank">DJANGO - Como CRIAR um Sistema de CADASTRO do ZERO! - Dev Aprender | Jhonatan de Souza</a><br>
 
 ### Conclusão
 
