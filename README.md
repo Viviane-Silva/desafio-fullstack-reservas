@@ -6,7 +6,7 @@ Projeto desenvolvido como **desafio técnico** para criar um sistema web que per
 
 ## Demonstração
 
-![Demonstração do sistema de reservas](./ReservaAmbienteTrabalho.gif)
+![Demonstração do sistema de reservas](./ReservasAmbienteTrabalho.gif)
 > O GIF acima mostra o fluxo completo de criação de uma reserva, incluindo seleção de estação, data e período.
 
 
